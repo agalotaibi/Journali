@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct JournaliApp: App {
+//    @StateObject var vm = addJournalViewModel()
+    let viewModel = addJournalViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainPage(viewModel: addJournalViewModel())
+//                .environmentObject(vm)
         }
     }
 }

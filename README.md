@@ -17,10 +17,11 @@
 ---
 
 ## 🛠️ Tech Stack
-	•	SwiftUI
-	•	MVVM Architecture
-	•	SwiftData
-	•	Xcode
+
+- ![Swift](https://img.shields.io/badge/Swift-FA7343?logo=swift&logoColor=white) Swift 5.9
+- ![SwiftUI](https://img.shields.io/badge/SwiftUI-46B1FB?logo=swift&logoColor=white) SwiftUI
+- ![Xcode](https://img.shields.io/badge/Xcode-1575F9?logo=xcode&logoColor=white) Xcode 15+
+- ![iOS](https://img.shields.io/badge/iOS-000000?logo=apple&logoColor=white) iOS 17+
 
 
  ---

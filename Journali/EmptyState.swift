@@ -14,14 +14,32 @@ struct EmptyState: View {
     var body: some View {
         NavigationStack{
             VStack(spacing: 20){
-                HStack{
-                    Text("Journal")
+               
+                
+                Spacer()
+                VStack{
+                    Image("emptybook")
+                        .resizable()
+                        .frame(width: 151.39, height: 97.32)
+                    
+                    Text("Begin Your Journal")
                         .font(.title)
                         .fontWeight(.bold)
+                        .foregroundStyle(Color(.main))
+                        .padding()
                     
-                    Spacer()
-                    HStack{
-                        Image(systemName: "plus").frame(width: 40, height: 40).background(Color(.elem))
+                    Text("Craft your personal diary, \n tap the plus icon to begin")
+                }
+                
+                Spacer()
+            }.navigationTitle("Journal").toolbar {
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    
+                    
+                    label:do {Image(systemName: "plus").foregroundStyle(Color(.main))
+                            .frame(width: 40, height: 40)
+                            .background(Color(.elem))
                             .cornerRadius(90).onTapGesture {
                                 showingSheet.toggle()
                             }
@@ -29,20 +47,10 @@ struct EmptyState: View {
                                 // Pass the same viewModel to SetReminder
                                 NewJournal(viewModel: viewModel)
                             }
-                        
-                    }.foregroundStyle(Color(.main))
-                }.padding()
-                
-                Spacer()
-                Image("book")
-                Text("Begin Your Journal")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundStyle(Color(.main))
-                Text("Craft your personal diary, \n tap the plus icon to begin")
-                
-                Spacer()
-            }
+                    }
+                    
+                }
+                }
         }
     }
 }
